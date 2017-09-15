@@ -91,3 +91,23 @@
         },
     }
 </script>
+
+<style>
+    .avatar {
+        height: 75px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .user-details {
+        background-color: #f5f5f5;
+        border-right: 1px solid #ddd;
+        margin: -10px 0;
+    }
+    .time-block {
+        padding: 10px;
+    }
+  .comment-section {
+        padding: 20px;
+    }
+</style>
