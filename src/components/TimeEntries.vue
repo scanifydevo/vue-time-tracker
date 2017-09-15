@@ -22,7 +22,7 @@
                     <div class="row">
 
                         <div class="col-sm-2 user-details">
-                            <img: src="timeEntry.user.image" class="avatar img-circle img-responsive" />
+                            <img :src="timeEntry.user.image" class="avatar img-circle img-responsive" />
                             <p class="text-center">
                                 <strong>
                                     {{ timeEntry.user.firstName }}
