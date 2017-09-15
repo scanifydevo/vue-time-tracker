@@ -57,3 +57,37 @@
         </div>
     </div>
 </template>
+
+<script>
+    export default {
+        data(){
+            //we want to start with an existing time entry
+            let existingEntry = {
+                user: {
+                    firstName: 'Alexandra',
+                    lastName: 'Petrov',
+                    email: 'alexandra.petrov@gmail.com',
+                    image: 'https://1.gravatar.com/avatar/7f4ec37467f2f7db6fffc7b4d2cc8dc2?s=250'
+                },
+                comment: 'First time entry',
+                totalTime: 1.5,
+                date: '2017-09-14'
+            }
+            return {
+                //start out with the existing entry
+                //by placing it in the array
+                timeEntries: [existingEntry]
+            }
+        },
+        methods: {
+            deleteTimeEntry(timeEntry){
+                //get the index of the clicked time entry and splice it out
+                let index = this.timeEntries.indexOf(timeEntry)
+                if (window.confirm('Are you sure you want to delete this time entry?')) {
+                    this.timeEntries.splice(index, 1)
+                    this.$dispatch('deleteTime', timeEntry)
+                }
+            }
+        },
+    }
+</script>
