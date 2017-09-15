@@ -2,7 +2,7 @@
     <div>
         <button
             v-if="$route.path !== '/time-entries/log-time'"
-            v-if="'/time-entries/log-time'"
+            v-link="'/time-entries/log-time'"
             class = "btn btn-primary">
             Log Time
         </button>
@@ -20,7 +20,8 @@
             <div class="list-group">
                 <a class="list-group-item" v-for="timeEntry in timeEntries">
                     <div class="row">
-                        <div class="col-sm-2 user-detail">
+
+                        <div class="col-sm-2 user-details">
                             <img: src="timeEntry.user.image" class="avatar img-circle img-responsive" />
                             <p class="text-center">
                                 <strong>
@@ -51,6 +52,7 @@
                                 X
                             </button>
                         </div>
+                        
                     </div>
                 </a>
             </div>
