@@ -91,6 +91,11 @@
                 }
             }
         },
+        events: {
+            timeUpdate(timeEntry) {
+                this.timeEntries.push(timeEntry)
+            }
+        }
     }
 </script>
 
